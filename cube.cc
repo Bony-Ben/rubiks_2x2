@@ -22,3 +22,12 @@ void Cube::reset() {
 
 void Cube::scramble() {
 }
+
+bool Cube::solved() {
+    for (int i = 0; i < (int) sides.size(); i++) {
+        if (!sides[i]->solved()) {
+            return false;
+        }
+    }
+    return true;
+}

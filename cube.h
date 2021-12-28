@@ -12,6 +12,7 @@ struct Cube {
 
     void reset();
     void scramble();
+    bool solved();
 };
 
 #endif

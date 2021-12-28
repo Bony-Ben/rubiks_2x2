@@ -5,7 +5,12 @@ Face::Face(char c) {
 }
 
 bool Face::solved() {
-    return tiles[0] == tiles[1] && tiles[1] == tiles[2] && tiles[2] == tiles[3];
+    for (int i = 0; i < (int)tiles.size() - 1; i++) {
+        if (tiles[i] != tiles[i + 1]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 void Face::rotate() {
