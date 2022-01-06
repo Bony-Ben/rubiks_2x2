@@ -11,6 +11,7 @@ struct Face {
 
     bool solved();
     void rotate();
+    void rotatePrime();
 };
 
 #endif

@@ -1,4 +1,5 @@
 #include "cube.h"
+#include <stdlib.h> 
 
 Cube::Cube() {
     reset();
@@ -21,10 +22,17 @@ void Cube::reset() {
 }
 
 void Cube::scramble() {
+    for (int i = 0; i < 100; i++) {
+        if (rand() % 2 == 0) {
+            sides[rand() % 6]->rotate();
+        } else {
+            sides[rand() % 6]->rotatePrime();
+        }
+    }
 }
 
 bool Cube::solved() {
-    for (int i = 0; i < (int) sides.size(); i++) {
+    for (int i = 0; i < (int)sides.size(); i++) {
         if (!sides[i]->solved()) {
             return false;
         }
