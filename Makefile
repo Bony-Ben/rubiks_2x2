@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++14 -g -Wall -MMD
+CXXFLAGS = -std=c++14 -g -Wall -MMD -O3
 # -O3
 EXEC = cube
 OBJECTS = face.o cube.o main.o
