@@ -28,32 +28,6 @@ char &Face::getTile(Face *parent, Face *next, bool index) {
     } else {
         return index ? tiles[3] : tiles[0];
     }
-
-    // if (parent == adj[0]) {
-    //     if (next == adj[1]) {
-    //         return index ? tiles[1] : tiles[0];
-    //     } else {
-    //         return index ? tiles[0] : tiles[1];
-    //     }
-    // } else if (parent == adj[1]) {
-    //     if (next == adj[2]) {
-    //         return index ? tiles[2] : tiles[1];
-    //     } else {
-    //         return index ? tiles[1] : tiles[2];
-    //     }
-    // } else if (parent == adj[2]) {
-    //     if (next == adj[3]) {
-    //         return index ? tiles[3] : tiles[2];
-    //     } else {
-    //         return index ? tiles[2] : tiles[3];
-    //     }
-    // } else {
-    //     if (next == adj[0]) {
-    //         return index ? tiles[0] : tiles[3];
-    //     } else {
-    //         return index ? tiles[3] : tiles[0];
-    //     }
-    // }
 }
 
 void Face::rotate() {
